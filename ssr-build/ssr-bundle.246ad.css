@@ -1,0 +1,138 @@
+html {
+  height: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#app {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  max-width: 320px;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+}
+
+header {
+  padding: 0.5rem 0;
+}
+
+footer {
+  padding: 0.5rem 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+section {
+  margin: 1rem;
+  text-align: left;
+}
+
+section.note {
+  font-size: 0.9rem;
+  padding: 0 1rem 0.5rem;
+}
+
+nav a.active {
+  text-decoration: none;
+  color: #444;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+output {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+menu {
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+menu li {
+  list-style: none;
+  padding: 0;
+  margin: 0 1rem;
+  flex: 0 0 auto;
+}
+
+menu button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+  font-size: 0;
+  width: 48px;
+  height: 48px;
+}
+
+menu button svg {
+  width: 100%;
+  height: 100%;
+}
+
+ol.laps {
+  margin: 1rem 5rem 1rem 4rem;
+}
+
+ol.laps li {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+time {
+  font-weight: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+ol.histories li {
+  margin: 0.5rem 0;
+}
+
+ol.histories li span.lapsCount {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+
+/*# sourceMappingURL=ssr-bundle.246ad.css.map*/
