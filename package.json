@@ -1,0 +1,122 @@
+{
+  "private": true,
+  "name": "StartStop.app",
+  "description": "A simple stopwatch with voice commands and history.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Fresh Codes <hello@fresh.codes> (https://fresh.codes/)",
+  "scripts": {
+    "start": "npm run -s dev",
+    "build": "preact build --brotli",
+    "serve": "sirv build --port 8080 --cors --single",
+    "dev": "preact watch",
+    "lint": "eslint --fix src *.js && stylelint --fix \"**/*.css\"",
+    "test": "jest ./tests"
+  },
+  "eslintConfig": {
+    "globals": {
+      "localStorage": true,
+      "requestAnimationFrame": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
+    "settings": {
+      "react": {
+        "pragma": "h"
+      }
+    },
+    "env": {
+      "jest": true
+    },
+    "rules": {
+      "react/jsx-no-bind": [
+        "error",
+        {
+          "allowArrowFunctions": true,
+          "allowBind": false,
+          "ignoreRefs": true
+        }
+      ],
+      "react/no-unknown-property": 0,
+      "react/no-did-update-set-state": 2,
+      "react/react-in-jsx-scope": 2,
+      "react/prop-types": 0,
+      "react/jsx-handler-names": 0
+    }
+  },
+  "eslintIgnore": [
+    "build/*",
+    "node_modules/*",
+    "functions/node_modules/*"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "font-family-no-missing-generic-family-keyword": null,
+      "at-rule-no-unknown": null
+    },
+    "ignoreFiles": [
+      "node_modules/**",
+      "build/**"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-preact-pure": "^2.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.2",
+    "jest-preset-preact": "^4.0.2",
+    "lint-staged": "^10.3.0",
+    "preact-cli": "^3.0.2",
+    "sirv-cli": "1.0.3",
+    "stylelint": "^13.7.1",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "geopattern": "^1.2.3",
+    "preact": "^10.5.5",
+    "preact-render-to-string": "^5.1.10",
+    "preact-router": "^3.2.1",
+    "unistore": "^3.5.2"
+  },
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not android <= 4.4",
+    "not ie <= 11",
+    "not ie_mob <= 11",
+    "not bb <= 10",
+    "not op_mob <= 12.1"
+  ],
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.scss": "stylelint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  }
+}
