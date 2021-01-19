@@ -88,7 +88,7 @@
   "dependencies": {
     "geopattern": "^1.2.3",
     "preact": "^10.5.5",
-    "preact-render-to-string": "^5.1.10",
+    "preact-render-to-string": "^5.1.12",
     "preact-router": "^3.2.1",
     "unistore": "^3.5.2"
   },
