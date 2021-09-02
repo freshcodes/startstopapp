@@ -24,6 +24,6 @@ updates:
     open-pull-requests-limit: 25
     target-branch: "master"
     allow:
-      - dependency-type: "all"
+      - dependency-type: "direct"
     assignees:
       - "brandonaaron"
